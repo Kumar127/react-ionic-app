@@ -7,17 +7,27 @@ import {
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
-  IonTabs
+  IonTabs,
+  IonHeader,
+  IonToolbar,
+  IonMenu,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonItem,
+  IonSplitPane,
+  IonMenuButton
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { apps, flash, send, home, help} from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
-import Details from './pages/Details';
+import { flash, send, help,} from 'ionicons/icons';
+import Book from './pages/Book';
+import Shop from './pages/Shop';
+import MyAptt from './pages/MyAptt';
+import SignIn from '../src/Componenets/signUp/SIgnIn/SignIn'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
+import '@ionic/react/css/ionic.bundle.css';
 
 /* Basic CSS for apps built with Ionic */
 import '@ionic/react/css/normalize.css';
@@ -34,35 +44,40 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Register from '../src/Componenets/signUp/SIgnIn/SignUp/SignUp'
 
 const App: React.FC = () => (
+  <>
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/home" component={Tab1} exact={true} />
-          <Route path="/about" component={Tab2} exact={true} />
-          <Route path="/about/details" component={Details} />
-          <Route path="/setting" component={Tab3} />
-          <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
+          <Route path="/book" component={Book} exact={true} />
+          <Route path="/login" component={SignIn} exact={true} />
+          <Route path="/register" component={Register} exact={true} />
+          <Route path="/myAptt" component={MyAptt} />
+          <Route path="/" render={() => <Redirect to="/book" />} exact={true} />
         </IonRouterOutlet>
-        <IonTabBar slot="top">
-          <IonTabButton tab="home" href="/home">
-            <IonIcon icon={home} />
-            <IonLabel>Home</IonLabel>
+        <IonTabBar slot="bottom">
+          <IonTabButton tab="Book" href="/book">
+            <IonIcon icon={flash} />
+            <IonLabel>Book</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="about" href="/about">
-            <IonIcon icon={help} />
-            <IonLabel>Help</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="setting" href="/setting">
+          <IonTabButton tab="Shop" href="/shop">
             <IonIcon icon={send} />
-            <IonLabel>My Bookings</IonLabel>
+            <IonLabel>Shop</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="MyAptt" href="/myAptt">
+            <IonIcon icon={help} />
+            <IonLabel>MyAptt</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
+    {/* </IonSplitPane>  */}
   </IonApp>
+  </>
 );
 
 export default App;
+
