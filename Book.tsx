@@ -1,5 +1,5 @@
-import React from 'react';
-import {menu, arrowForward, navigate} from 'ionicons/icons';
+import React, { useState } from 'react';
+import {menu, arrowForward, navigate, home} from 'ionicons/icons';
 import women_salon from '../Assests/hair.jpg'
 import AC from '../Assests/Ac_repair_pics.jpg'
 import signIn from '../Componenets/signUp/SIgnIn/SignIn'
@@ -16,11 +16,12 @@ import {IonCard,
     IonItem,
     IonLabel,
     IonPage,
-    IonToolbar, IonButtons, IonText, IonList, IonIcon, IonCardHeader, IonCardTitle, IonAvatar, IonSlides, IonSlide, IonListHeader, IonItemSliding, IonItemOptions, IonItemOption, IonSearchbar } from '@ionic/react';
+    IonToolbar, IonButtons, IonText, IonList, IonIcon, IonCardHeader, IonCardTitle, IonAvatar, IonSlides, IonSlide, IonListHeader, IonItemSliding, IonItemOptions, IonItemOption, IonSearchbar, IonThumbnail, IonGrid, IonRow, IonCol, IonButton } from '@ionic/react';
 
 import Sig from '../Componenets/signUp/SIgnIn/SignIn'
 function Book() {
     // const [showModal, setShowModal] = useState(false)
+    const [search,setSearch]=useState('');
     const slidesOptions:any = {
       slidesPerView:1
 }
@@ -35,10 +36,117 @@ function Book() {
       </IonButtons>
     </IonToolbar>
   </IonHeader>
-    <IonContent className="ion-content ion-padding">
-    <IonSearchbar placeholder="What are You Looking for" color="success"></IonSearchbar>
-    <IonList className="ion-card">  
-      <IonItem className="ion-card" >
+    <IonContent className="ion-content" >
+    <IonSearchbar placeholder="What are You Looking for" className="search-bar" animated autocomplete="on" autoCorrect="on" value={search} onIonChange={e => setSearch(e.detail.value!)}></IonSearchbar>
+    <IonCard className="ion-card-outer" mode="ios">
+    <IonGrid>
+    <IonRow>
+      {search ? }
+      <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>AC REPAIR STORE</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard >
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>PLUMBER</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard >
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>CARPENTER</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard>
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>COOK NEAR YOU</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard>
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>PARTY DECORATION & ARRANGEMENT</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard>
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>PAINTER & PEST CONTROL</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard>
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>AC REPAIR STORE</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard>
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>AC REPAIR STORE</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard>
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>AC REPAIR STORE</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard>
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>AC REPAIR STORE</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard>
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>AC REPAIR STORE</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard>
+          <IonCard className="ion-card">
+          <IonCol>
+            <div onClick={()=>window.location.href='/login'}>
+              <IonLabel>AC REPAIR STORE</IonLabel>
+              <IonIcon icon={home}></IonIcon>
+            </div>
+          </IonCol>
+          </IonCard>
+        
+          </IonRow>
+    </IonGrid>
+    </IonCard>
+
+
+    
+    {/* <IonList inset className="ion-list" lines="none">
+      <IonItem className="ion-item" button onClick={() => {}} >
         <IonAvatar>
           <img src={women_salon}/>
         </IonAvatar>
@@ -46,7 +154,7 @@ function Book() {
             <IonCardTitle className="ion-card-title-img">Ladies Salon</IonCardTitle>
           </IonCardHeader>
       </IonItem>
-      <IonItem className="ion-card" >
+      <IonItem className="ion-card" button onClick={() => {}} >
         <IonAvatar>
           <img src={AC}/>
         </IonAvatar>
@@ -54,7 +162,7 @@ function Book() {
             <IonCardTitle className="ion-card-title-img">AC Services</IonCardTitle>
           </IonCardHeader>
       </IonItem>
-      <IonItem className="ion-card" >
+      <IonItem className="ion-card" button onClick={() => {}} >
         <IonAvatar>
           <img src={men_salon}/>
         </IonAvatar>
@@ -102,7 +210,7 @@ function Book() {
             <IonCardTitle className="ion-card-title-img">Painting & Pest Control</IonCardTitle>
           </IonCardHeader>
       </IonItem>
-    </IonList>
+    </IonList> */}
     <IonItem>
         <IonLabel slot="start">Special Offers</IonLabel>
         <IonIcon icon={arrowForward} mode="ios" slot="end"/>
@@ -152,7 +260,7 @@ function Book() {
       </IonModal>
       <IonButton className="ion-button-modal" expand="block" onClick={() => setShowModal(true)}>CALCULATE</IonButton> */}
     </IonContent>
-  </>
+    </>
   );
 }
 

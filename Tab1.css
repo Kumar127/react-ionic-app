@@ -1,0 +1,82 @@
+/* .welcome-card  {
+  background-color: rgba(219, 88, 219, 0.76);
+}
+.ion-card {
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.877); 
+  max-height: 120px;
+  margin: 20px;
+}
+img {
+  background-size: cover;
+}
+
+.ion-back-button{
+  display: block;
+}
+.ion-text-header {
+  margin-left: 45px;
+  color: black;
+  font-weight: 900;
+  font-size: large;
+}
+.ion-content {
+  padding-top: 0px;
+  padding-left: 0px;
+} */
+.ion-text-header {
+  margin: 0 50px;
+  color: black;
+  font-weight: 900;
+  font-size: x-large;
+}
+.poster_card {
+    width: 400px;
+    height: 140px;
+}
+.girl_card {
+  --background:url('../Assests/hair.jpg');
+  background-size: cover;
+}
+.ac_repair_card {
+  --background:url('../Assests/hair.jpg');
+  background-size: cover;
+}
+.Cleaning__card {
+  --background:url('../Assests/hair.jpg');
+  background-size: cover;
+}
+.Painting_card {
+  --background:url('../Assests/hair.jpg');
+  background-size: cover;
+}
+#main{
+  background-color: #3880ff;
+}
+.ion-content {
+  padding: 5px 10px;
+}
+.search-bar {
+  margin: 2px 2px;
+  box-shadow: none;
+  border: none;
+}
+.ion-card {
+  margin: 2px 2px;
+  width: 74px;
+  border: 4px solid dashed rgb(101, 224, 64) !important;
+  box-shadow:0 5px 15px rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+}
+.ion-card:hover {
+  color: green !important;
+}
+.ion-card-outer {
+  margin: 5px 1px;
+  background-image: url('../Assests/make_up.jpg');  
+    background-size: cover;
+    border: none;
+    padding: 2px 2px;
+    box-shadow: none;
+    ;
+}
