@@ -1,0 +1,114 @@
+#schedule-page {
+  ion-item-sliding.track-ionic ion-label {
+    border-left: 2px solid var(--ion-color-primary);
+    padding-left: 10px;
+  }
+  ion-item-sliding.track-angular ion-label {
+    border-left: 2px solid var(--ion-color-angular);
+    padding-left: 10px;
+  }
+  ion-item-sliding.track-communication ion-label {
+    border-left: 2px solid var(--ion-color-communication);
+    padding-left: 10px;
+  }
+  ion-item-sliding.track-tooling ion-label {
+    border-left: 2px solid var(--ion-color-tooling);
+    padding-left: 10px;
+  }
+  ion-item-sliding.track-services ion-label {
+    border-left: 2px solid var(--ion-color-services);
+    padding-left: 10px;
+  }
+  ion-item-sliding.track-design ion-label {
+    border-left: 2px solid var(--ion-color-design);
+    padding-left: 10px;
+  }
+  ion-item-sliding.track-workshop ion-label {
+    border-left: 2px solid var(--ion-color-workshop);
+    padding-left: 10px;
+  }
+  ion-item-sliding.track-food ion-label {
+    border-left: 2px solid var(--ion-color-food);
+    padding-left: 10px;
+  }
+  ion-item-sliding.track-documentation ion-label {
+    border-left: 2px solid var(--ion-color-documentation);
+    padding-left: 10px;
+  }
+  ion-item-sliding.track-navigation ion-label {
+    border-left: 2px solid var(--ion-color-navigation);
+    padding-left: 10px;
+  }
+  .ion-card-main{
+    border: 3px solid burlywood;
+  }
+  .ion-card-content {
+    border: 2px solid red;
+    border:0 5px;
+    margin:0 1px;
+    text-align:center;
+  }
+  .ion-label {
+    margin: auto
+  }
+  h2 {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    top: 49%;
+    left: 1%;
+    font-size: 21pt;
+    text-align: center;
+    color:whitesmoke;
+    z-index: 900;
+}
+// h4 {
+//   width: 200px;
+//   height: 40px;
+//   position: absolute;
+//   top: 54%;
+//   left: -15%;
+//   font-size: 18pt;
+//   text-align: center;
+//   color:white;
+//   z-index: 900;
+// }
+.him {
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  top: 10%;
+  left: -15%;
+  font-size: 20pt;
+  text-align: center;
+  color:red;
+  z-index: 900;
+}
+.her {
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  top: 10%;
+  left: 55%;
+  font-size: 20pt;
+  text-align: center;
+  color:red;
+  z-index: 900;
+}
+.poster_card {
+  width: 550px;
+  height: 80px;
+  margin: 5px
+}
+.title-home {
+  margin: 0 5px
+}
+.ion-icon-header {
+  margin: 0 5px;
+}
+.Slide_text {
+  color: red;
+  display: contents;
+  font-size: 14px;
+}
+}
